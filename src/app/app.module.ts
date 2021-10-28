@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from "@angular/material/slider";
 import {ComponentsModule} from "./components/components.module";
+import {FacebookLoginProvider, SocialLoginModule} from "angularx-social-login";
 
 @NgModule({
   declarations: [
@@ -16,9 +17,21 @@ import {ComponentsModule} from "./components/components.module";
     MatSliderModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [{
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autologin: false,
+      providers: [
+        {
+          id:FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider('id') //FIXME: Add ID
+        }
+      ]
+    }
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
