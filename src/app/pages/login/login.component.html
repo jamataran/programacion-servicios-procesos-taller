@@ -1,6 +1,15 @@
-<mat-card>
+<mat-card *ngIf="!isLogged">
   <mat-card-content>Bienvenidos a la aplicación. Utilizaremos Facebook para que podáis continuar</mat-card-content>
   <button (click)="facebookSignin()" mat-fab color="primary" aria-label="Example icon button with a delete icon">
     <mat-icon>facebook</mat-icon>
+  </button>
+</mat-card>
+<mat-card *ngIf="isLogged">
+  <mat-card-content>{{user.firstName}}, ya has iniciado sesión. Ahora puedes acceder al juego o cerrar sesión</mat-card-content>
+  <button routerLink="/game" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon>videogame_asset</mat-icon>
+  </button>
+  <button (click)="logOut()" mat-fab color="warn" aria-label="Example icon button with a delete icon">
+    <mat-icon>logout</mat-icon>
   </button>
 </mat-card>
