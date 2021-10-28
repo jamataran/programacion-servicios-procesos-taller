@@ -1,0 +1,32 @@
+.g-contenedor {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.es-movil .example-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+h1.nombre-app {
+  margin-left: 8px;
+}
+
+.contenedor {
+  flex: 1;
+}
+
+.es-movil .contenedor {
+  flex: 1 0 auto;
+}
+
+.icono{
+  min-width: 10px;
+  text-align: left;
+  margin-right: 20px;
+}
