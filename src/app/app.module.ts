@@ -8,6 +8,7 @@ import {MatSliderModule} from "@angular/material/slider";
 import {ComponentsModule} from "./components/components.module";
 import {FacebookLoginProvider, SocialLoginModule} from "angularx-social-login";
 import {PagesModule} from "./pages/pages.module";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import {PagesModule} from "./pages/pages.module";
       providers: [
         {
           id:FacebookLoginProvider.PROVIDER_ID,
-          provider: new FacebookLoginProvider('id') //FIXME: Add ID
+          provider: new FacebookLoginProvider(environment.facebookId)
         }
       ]
     }

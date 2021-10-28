@@ -14,13 +14,15 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatSelectModule} from "@angular/material/select";
 import {AppRoutingModule} from "../app-routing.module";
 import {FormsModule} from "@angular/forms";
+import { HomeComponent } from './home/home.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    GameComponent
+    GameComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
