@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from "@angular/material/slider";
 import {ComponentsModule} from "./components/components.module";
 import {FacebookLoginProvider, SocialLoginModule} from "angularx-social-login";
+import {PagesModule} from "./pages/pages.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {FacebookLoginProvider, SocialLoginModule} from "angularx-social-login";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    PagesModule,
     SocialLoginModule
   ],
   providers: [{
